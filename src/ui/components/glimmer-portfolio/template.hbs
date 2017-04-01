@@ -4,8 +4,11 @@
       <img onclick={{action toggleLeftColumn}} src="{{activePortfolioItem.img}}" alt="">
     </div>
     <div class="middle column">
-      <h3>{{activePortfolioItem.title}}</h3>
-      <div class="technology">
+      <h3>
+        {{activePortfolioItem.title}}
+        <span class="label">{{activePortfolioItem.projectType}}</span>
+      </h3>
+      <div class="technologies">
         {{#each activePortfolioItem.technologies key="@index" as |technology|}}
           <tech-button @onclick={{action updateFilter}} @name={{technology}} @filter={{filterBy}} />
         {{/each}}
