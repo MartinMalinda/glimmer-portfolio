@@ -1,0 +1,18 @@
+.filter-info {
+
+  width: 200px;
+  padding: 20px;
+  max-width: 200px;
+  transition: 0.5s max-width, 0.2s opacity;
+  opacity: 1;
+  flex-shrink: 0;
+
+  &.hidden {
+    max-width: 0;
+    opacity: 0;
+  }
+
+  .inner {
+    width: 160px;
+  }
+}

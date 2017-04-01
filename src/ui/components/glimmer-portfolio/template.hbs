@@ -1,3 +1,38 @@
-<div>
-  <h1>Welcome to Glimmer!</h1>
+<div class="glimmer-portfolio">
+  <div class="columns">
+    <div class="left column {{extraLeftColumnClass}}">
+      <img onclick={{action toggleLeftColumn}} src="{{activePortfolioItem.img}}" alt="">
+    </div>
+    <div class="middle column">
+      <h3>{{activePortfolioItem.title}}</h3>
+      <div class="technology">
+        {{#each activePortfolioItem.technologies key="@index" as |technology|}}
+          <tech-button @onclick={{action updateFilter}} @name={{technology}} @filter={{filterBy}} />
+        {{/each}}
+      </div>
+      <div class="description">
+        {{activePortfolioItem.description}}
+      </div>
+    </div>
+    <div class="right column">
+      <h4>My work</h4>
+      {{#each activePortfolioItem.myWork key="@index" as |work|}}
+        <div class="line">
+          {{work}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="thumbnails">
+    <filter-info @filterBy={{filterBy}} />
+    {{#each portfolioData key="@index" as |portfolioItem|}}
+      <portfolio-thumbnail
+        class="thumbnail"
+        onclick={{action updateActiveItem portfolioItem}}
+        @filterBy={{filterBy}}
+        @model={{portfolioItem}}
+        @activeItem={{activePortfolioItem}}
+        @img={{portfolioItem.img}} />
+    {{/each}}
+  </div>
 </div>
