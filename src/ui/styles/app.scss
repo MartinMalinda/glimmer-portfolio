@@ -137,7 +137,7 @@ $primary: $darkgreen;
   .columns {
     display: flex;
     justify-content: space-between;
-    height: calc(90vh);
+    min-height: 100vh;
   }
 
   .column {
@@ -188,14 +188,13 @@ $primary: $darkgreen;
     }
 
     &.left {
-      // width: calc(100vw - #{$side-column-size * 2});
-      // max-width: 600px;
       width: 600px;
       background: transparentize(white, 0.07);
       opacity: 1;
       border-right: 4px solid $primary;
       position: relative;
       z-index: 2;
+      padding-bottom: 215px;
     }
   }
 
