@@ -44,6 +44,15 @@ export default [
     projectType: 'Website',
     currentSrc: ''
   },{
+    title: 'Meetserenity.com',
+    technologies: ["Gulp", "VanillaJS"],
+    description: "Landing page for Serenity Themes. Extremely optimized to load as quickly as possible.",
+    myWork: ['Content Strategy', 'Load performance optimizations', 'Interactive content'],
+    img: 'http://unsplash.it/1025/1000',
+    smallImg: 'https://unsplash.it/200/299',
+    projectType: 'Website',
+    currentSrc: ''
+  },{
     title: 'Interactive UI for PriceFX',
     technologies: ["Ember", "Semantic UI", "Node.js"],
     description: "Interactive UI for leading SaaS pricing and CQP solution provider.",
