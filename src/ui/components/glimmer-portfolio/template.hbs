@@ -1,12 +1,8 @@
 <div class="glimmer-portfolio">
   <div class="columns">
-    <div class="left column {{extraLeftColumnClass}}">
-      <img onclick={{action toggleLeftColumn}} src="{{activePortfolioItem.img}}" alt="">
-    </div>
-    <div class="middle column">
+    <div class="left column">
       <h3>
         {{activePortfolioItem.title}}
-        <span class="label">{{activePortfolioItem.projectType}}</span>
       </h3>
       <div class="technologies">
         {{#each activePortfolioItem.technologies key="@index" as |technology|}}
@@ -16,14 +12,17 @@
       <div class="description">
         {{activePortfolioItem.description}}
       </div>
-    </div>
-    <div class="right column">
+     <div class="my-work">
       <h4>My work</h4>
-      {{#each activePortfolioItem.myWork key="@index" as |work|}}
-        <div class="line">
-          {{work}}
-        </div>
-      {{/each}}
+       {{#each activePortfolioItem.myWork key="@index" as |work|}}
+         <div class="line">
+           {{work}}
+         </div>
+       {{/each}}
+      </div>
+    </div>
+    <div class="right column" style="background:url('{{activePortfolioItem.img}}')">
+      
     </div>
   </div>
   <div class="thumbnails">

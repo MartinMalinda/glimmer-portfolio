@@ -6,6 +6,8 @@
   transition: 0.5s max-width, 0.2s opacity;
   opacity: 1;
   flex-shrink: 0;
+  background: transparentize(white, 0.1);
+  margin: 4px 0;
 
   &.hidden {
     max-width: 0;

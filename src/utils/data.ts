@@ -69,7 +69,9 @@ export default [
     title: 'Lukaslindner.cz',
     technologies: ['Ember', 'Shell'],
     description: 'Personal website of a famous czech Fashion artist. It features a unique gallery layout and zooming funtionality.',
-    myWork: ['Creating a tailored web app', 'Prerendering logic']
+    myWork: ['Creating a tailored web app', 'Prerendering logic'],
+    img: 'http://lorempixel.com/1013/1000',
+    projectType: 'Website'
   },{
     title: 'Open Finance',
     technologies: ["GoogleMapsAPI"],

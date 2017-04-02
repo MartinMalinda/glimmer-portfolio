@@ -9,7 +9,7 @@ interface filter {
 export default class GlimmerPortfolio extends Component {
   @tracked portfolioData : Array<PortfolioItem>;
   @tracked active : number = 0;
-  @tracked isLeftColumnExpanded : boolean = false;
+  @tracked isRightColumnExpanded : boolean = false;
   @tracked filterBy : filter = {
     propName: '',
     value: ''
@@ -21,9 +21,9 @@ export default class GlimmerPortfolio extends Component {
     this.portfolioData = data;
   }
 
-  @tracked('isLeftColumnExpanded')
-  get extraLeftColumnClass() : string {
-    if(this.isLeftColumnExpanded){
+  @tracked('isRightColumnExpanded')
+  get extraColumnClass() : string {
+    if(this.isRightColumnExpanded){
       return 'expanded';
     }
 
@@ -44,6 +44,6 @@ export default class GlimmerPortfolio extends Component {
   }
 
   toggleLeftColumn() : void {
-    this.isLeftColumnExpanded = !this.isLeftColumnExpanded;
+    this.isRightColumnExpanded = !this.isRightColumnExpanded;
   }
 }

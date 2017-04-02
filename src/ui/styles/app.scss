@@ -7,8 +7,13 @@
   font-size: 16px;
   letter-spacing: 0.09em;
   line-height: 1.5em;
-  padding-top: 40px;
-  background: transparentize(lightgrey, 0.6);
+  border-bottom: 4px solid orange;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
 
   &, & * {
     box-sizing: border-box;
@@ -24,17 +29,23 @@
     margin: 0;
     line-height: 1.05em;
     position: relative;
+    padding: 1em 20px;
+    margin: 0em 20px;
+    color: white;
+    background: orange;
+    text-shadow: 1px 1px 2px rgba(125, 81, 0, 0.44);
 
     .label {
-      background: orange;
+      background: darkgrey;
       font-size: 12px;
       padding: 2px 5px;
       line-height: 16px;
       height: 20px;
       margin-left: 5px;
-      position: absolute;
       right: 0;
       top: 0;
+      text-shadow: none;
+      position: absolute;
 
     }
   }
@@ -48,11 +59,12 @@
   .thumbnails {
     display: flex;
     margin-top: 20px;
-    background: lightgrey;
     padding: 10px 0;
     overflow-x: auto;
     overflow-y: visible;
-    position: relative;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
   }
 
   .thumbnail {
@@ -62,13 +74,14 @@
     border: 3px solid transparent;
     transition: 0.3s border, 1s max-width, 0.3s opacity;
     max-width: 250px;
-  
-    &.active {
-      border-color: orange;
-    }
+    cursor: pointer;
 
     &:hover {
       border-color: transparentize(orange, 0.5);
+    }
+  
+    &.active {
+      border-color: orange;
     }
 
     &.hidden {
@@ -82,16 +95,18 @@
 
   .columns {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    height: calc(90vh);
   }
 
   .column {
     $side-column-size: 400px;
-    padding: 0 20px;
 
-    &.left {
-      width: $side-column-size;
+
+    &.right {
+      width: 100vw;
       transition: 0.7s width;
+      background-size: cover !important;
 
       img {
         border: 4px solid transparent;
@@ -102,26 +117,25 @@
           border: 4px solid transparentize(orange, 0.2);
         }
       }
-
-      &.expanded {
-        width: 100vw;
-        max-width: 1000px;
-      }
     }
 
     &.middle {
-      width: calc(100vw - #{$side-column-size * 2});
-      max-width: 600px;
-    }
-
-    &.right {
       width: $side-column-size;
       text-align: center;
+    }
+
+    &.left {
+      // width: calc(100vw - #{$side-column-size * 2});
+      // max-width: 600px;
+      width: 600px;
+      background: transparentize(white, 0.07);
+      opacity: 1;
     }
   }
 
   .technologies {
     margin-top: 20px;
+    padding: 0 20px;
   }
 
   .label {
@@ -140,12 +154,17 @@
   }
 
   .description {
-    margin-top: 20px;
-    height: 200px;
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+
+  .my-work {
+    padding: 0 20px;
   }
 
   .line {
-    padding: 5px 0px;
+    padding: 5px 8px;
+    margin-left: -8px;
     &:nth-child(2n - 1){
       background: transparentize(grey, 0.87);
     }
