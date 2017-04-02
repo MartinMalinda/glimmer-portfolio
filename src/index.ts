@@ -14,6 +14,7 @@ app.registerInitializer({
   }
 });
 
-app.boot();
 
 app.renderComponent('glimmer-portfolio', containerElement, null);
+
+app.boot();

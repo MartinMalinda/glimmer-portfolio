@@ -18,7 +18,7 @@ export default class PortfolioThumbnail extends Component {
 
     let classList = [];
 
-    if(this.args.img === this.args.activeItem.img) {
+    if(this.args.img === this.args.activeItem.smallImg) {
       classList.push('active');
     }
 
@@ -27,5 +27,9 @@ export default class PortfolioThumbnail extends Component {
     }
 
     return classList.join(' ');
+  }
+
+  didInsertElement() {
+    console.count();
   }
 };

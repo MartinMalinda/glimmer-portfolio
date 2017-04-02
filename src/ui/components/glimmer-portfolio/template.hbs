@@ -2,7 +2,7 @@
   <div class="columns">
     <div class="left column">
       <h3>
-        {{activePortfolioItem.title}}
+        <span class="type">{{activePortfolioItem.projectType}} / </span>{{activePortfolioItem.title}}
       </h3>
       <div class="technologies">
         {{#each activePortfolioItem.technologies key="@index" as |technology|}}
@@ -21,8 +21,11 @@
        {{/each}}
       </div>
     </div>
-    <div class="right column" style="background:url('{{activePortfolioItem.img}}')">
+    <div class="right column {{class-if showBlurredImage "blurred"}}" style="background:url('{{activePortfolioItem.img}}')">
+      <img class="loader" onload={{action largeImgLoaded}} src="{{activePortfolioItem.img}}" alt="">
       
+      <div class="blurred-placeholder" style="background:url('{{activePortfolioItem.currentSrc}}')">
+      </div>
     </div>
   </div>
   <div class="thumbnails">
@@ -31,10 +34,30 @@
       <portfolio-thumbnail
         class="thumbnail"
         onclick={{action updateActiveItem portfolioItem}}
+        onload={{action saveLoadedSrc portfolioItem}}
         @filterBy={{filterBy}}
         @model={{portfolioItem}}
         @activeItem={{activePortfolioItem}}
-        @img={{portfolioItem.img}} />
+        @img={{portfolioItem.smallImg}} />
     {{/each}}
   </div>
 </div>
+
+<svg height="0">
+<defs>
+  <mask id="mask-linear">
+    <rect width="400" height="300" fill="url(#l1)"></rect>
+    <linearGradient id="l1">
+      <stop stop-color="white" offset="0%"/>
+      <stop stop-color="black" offset="30%"/>
+      <stop stop-color="white" offset="100%"/>
+    </linearGradient>
+  </mask>
+  <filter id="filtre1">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+  </filter>
+  <filter id="filtre2">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+  </filter>
+</defs>
+</svg>
