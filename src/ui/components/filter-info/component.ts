@@ -2,11 +2,24 @@ import Component, { tracked } from '@glimmer/component';
 
 export default class FilterInfo extends Component {
   @tracked('args')
-  get extraClass() : string {
-    if(this.args.filterBy.propName){
-      return '';
-    }
+  get filteringByTechnologies() : boolean {
+    return this.args.filterBy.propName === 'technologies';
+  }
 
-    return 'hidden';
+  @tracked('args')
+  get withoutFilter() : boolean {
+    return this.args.filterBy.propName === '';
+  }
+
+  updateFilter(value : ProjectType) : void {
+
+    let propName = value ? 'projectType' : '';
+
+    const newFilter : Filter = {
+      propName,
+      value
+    };
+
+    this.args.onFilterUpdate(newFilter);
   }
 };

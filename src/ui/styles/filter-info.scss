@@ -7,7 +7,7 @@
   opacity: 1;
   flex-shrink: 0;
   background: transparentize(white, 0.1);
-  margin: 4px 0;
+  margin: 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,5 +21,30 @@
 
   .inner {
     width: 160px;
+  }
+
+  .filter-section {
+    position: relative;
+    cursor: pointer;
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.picked {
+      text-decoration: underline;
+      font-weight: bold;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        border-left: 5px solid black;
+        border-bottom: 5px solid transparent;
+        border-top: 5px solid transparent;
+        top: 8px;
+      }
+    }
   }
 }

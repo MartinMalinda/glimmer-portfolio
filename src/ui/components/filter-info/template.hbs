@@ -1,9 +1,20 @@
 <div class="filter-info">
   <div class="inner">
-    {{#if @filterBy.value}}
-      Projects with <strong>{{@filterBy.value}}</strong> in <strong>{{@filterBy.propName}}</strong>
+    {{#if filteringByTechnologies}}
+      Projects with <strong>{{@filterBy.value}}</strong> in <strong>{{@filterBy.propName}}</strong> (reset filter)
       {{else}}
-      {{@projectsLength}} projects ->
+        <a onclick={{action updateFilter ""}} class="filter-section {{class-if withoutFilter "picked"}}">
+          All {{@projectsLength}} projects
+          </a>
+        <a onclick={{action updateFilter "Website"}} class="filter-section {{class-if (eq @filterBy.value "Website") "picked"}}">
+          Websites
+        </a>
+        <a onclick={{action updateFilter "Consulting"}} class="filter-section {{class-if (eq @filterBy.value "Consulting") "picked"}}">
+          Consulting
+        </a>
+        <a onclick={{action updateFilter "Code"}} class="filter-section {{class-if (eq @filterBy.value "Code") "picked"}}">
+          Code exercises
+        </a>
     {{/if}}
   </div>
 </div>

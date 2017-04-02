@@ -5,9 +5,13 @@ export default class PortfolioThumbnail extends Component {
   @tracked('args')
   get isVisible() : boolean {
     const {filterBy, model} = this.args;
+    const {isArray} = Array;
     const filterData = model[filterBy.propName];
-    if(filterData && filterData.length){
+
+    if(isArray(filterData)){
       return filterData.find(value => value === filterBy.value);
+    } else if (typeof filterData === 'string'){
+      return filterData === filterBy.value;
     }
 
     return true;

@@ -32,7 +32,10 @@
     </div>
   </div>
   <div class="thumbnails">
-    <filter-info @projectsLength={{length portfolioData}} @filterBy={{filterBy}} />
+    <filter-info
+      @projectsLength={{length portfolioData}}
+      @onFilterUpdate={{action updateFilter}}
+      @filterBy={{filterBy}} />
     {{#each portfolioData key="@index" as |portfolioItem|}}
       <portfolio-thumbnail
         class="thumbnail"
