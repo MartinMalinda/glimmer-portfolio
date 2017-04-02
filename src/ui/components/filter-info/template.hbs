@@ -1,6 +1,10 @@
-<div class="filter-info {{extraClass}}">
+<div class="filter-info">
   <div class="inner">
-    Projects with <strong>{{@filterBy.value}}</strong> in <strong>{{@filterBy.propName}}</strong>
+    {{#if @filterBy.value}}
+      Projects with <strong>{{@filterBy.value}}</strong> in <strong>{{@filterBy.propName}}</strong>
+      {{else}}
+      {{@projectsLength}} projects ->
+    {{/if}}
   </div>
 </div>
     

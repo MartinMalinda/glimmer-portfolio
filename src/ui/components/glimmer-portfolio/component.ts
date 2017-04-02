@@ -12,6 +12,7 @@ export default class GlimmerPortfolio extends Component {
   @tracked portfolioData : Portfolio;
   @tracked active : number = 0;
   @tracked isRightColumnExpanded : boolean = false;
+  @tracked bgPositionY : number = 0;
   @tracked filterBy : Filter = {
     propName: '',
     value: ''
@@ -64,6 +65,13 @@ export default class GlimmerPortfolio extends Component {
     this.portfolioData = this.updatePortfolio(this.activePortfolioItem, {didLoadLargeImg: true});
   }
 
+  moveRightColumnBackground(event : Event) : void {
+    const {currentTarget, clientY} = event;
+    let height = currentTarget.offsetHeight;
+    let y = clientY - currentTarget.offsetTop;
+    this.bgPositionY = parseInt((y / height) * 100);
+  }
+
   updatePortfolio(item : PortfolioItem, newData : object) : Portfolio {
     const newItem = {
       ...item,
@@ -76,4 +84,5 @@ export default class GlimmerPortfolio extends Component {
 
     return newPortfolioData;
   }
+
 }

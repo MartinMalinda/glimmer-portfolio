@@ -13,7 +13,7 @@
         {{activePortfolioItem.description}}
       </div>
      <div class="my-work">
-      <h4>My work</h4>
+      <h4>{{length portfolioData}} My work</h4>
        {{#each activePortfolioItem.myWork key="@index" as |work|}}
          <div class="line">
            {{work}}
@@ -21,7 +21,10 @@
        {{/each}}
       </div>
     </div>
-    <div class="right column {{class-if showBlurredImage "blurred"}}" style="background:url('{{activePortfolioItem.img}}')">
+    <div
+      class="right column {{class-if showBlurredImage "blurred"}}"
+      style="background:url('{{activePortfolioItem.img}}') 50% {{bgPositionY}}%"
+      onmousemove={{action moveRightColumnBackground}}>
       <img class="loader" onload={{action largeImgLoaded}} src="{{activePortfolioItem.img}}" alt="">
       
       <div class="blurred-placeholder" style="background:url('{{activePortfolioItem.currentSrc}}')">
@@ -29,7 +32,7 @@
     </div>
   </div>
   <div class="thumbnails">
-    <filter-info @filterBy={{filterBy}} />
+    <filter-info @projectsLength={{length portfolioData}} @filterBy={{filterBy}} />
     {{#each portfolioData key="@index" as |portfolioItem|}}
       <portfolio-thumbnail
         class="thumbnail"
