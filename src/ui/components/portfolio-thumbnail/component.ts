@@ -20,7 +20,7 @@ export default class PortfolioThumbnail extends Component {
   @tracked('args', 'isVisible')
   get className() : string {
 
-    let classList = [];
+    let classList : Array<string> = [];
 
     if(this.args.img === this.args.activeItem.smallImg) {
       classList.push('active');
@@ -31,9 +31,5 @@ export default class PortfolioThumbnail extends Component {
     }
 
     return classList.join(' ');
-  }
-
-  didInsertElement() {
-    console.count();
   }
 };

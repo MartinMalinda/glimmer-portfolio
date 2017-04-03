@@ -1,11 +1,11 @@
 export interface PortfolioItem {
-  technologies: Array<Tech>;
+  technologies: Array<string>;
   description: string;
   myWork: Array<string>;
   title: string;
   img: string;
   smallImg: string;
-  projectType: ProjectType; 
+  projectType: string; 
   
   
   demoURL?: string;
@@ -17,23 +17,21 @@ export interface PortfolioItem {
   expanded?: boolean;
 }
 
+export interface Portfolio extends Array<PortfolioItem> {}
+
 export type Tech =
-  "Ember" |
-  "Firebase" |
-  "Semantic UI" |
-  "Node.js" |
-  "SVG" |
-  "Gulp" |
-  "Glimmer" |
-  "WordPress" |
-  "GoogleMapsAPI"
+  'Ember' | 
+  'Firebase' | 
+  'Semantic UI' | 
+  'SVG' |
+  "VanillaJS" |
+  'PhotoSwipe' |
+  'Gulp' | 
+  'Node.js'
 
-export type ProjectType = 
-  "Website" |
-  "Code" |
-  "Consulting"
+export type ProjectType = "Code" | "Website"  | "Consulting";
 
-export default [
+export const data : Portfolio = [
   {
     title: 'Scribe',
     technologies: ["Ember", "WordPress"],

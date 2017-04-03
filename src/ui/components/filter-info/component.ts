@@ -1,4 +1,6 @@
 import Component, { tracked } from '@glimmer/component';
+import { ProjectType } from '../../../utils/data';
+import { Filter } from '../glimmer-portfolio/component';
 
 export default class FilterInfo extends Component {
   @tracked('args')

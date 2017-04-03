@@ -199,7 +199,7 @@ $primary: $darkgreen;
   }
 
   .technologies {
-    margin-top: 20px;
+    margin-top: 5px;
     padding: 0 20px;
   }
 
@@ -222,6 +222,8 @@ $primary: $darkgreen;
     margin: 20px 0;
     padding: 20px 20px;
     background: transparentize(grey, 0.87);
+    letter-spacing: 0.05em;
+    margin-top: 15px;
   }
 
   .my-work {
@@ -231,6 +233,8 @@ $primary: $darkgreen;
   .line {
     padding: 5px 8px;
     margin-left: -8px;
+    letter-spacing: 0.05em;
+
     &:nth-child(2n - 1){
       background: transparentize(grey, 0.87);
     }

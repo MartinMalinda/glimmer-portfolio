@@ -1,7 +1,8 @@
 <div class="filter-info">
   <div class="inner">
     {{#if filteringByTechnologies}}
-      Projects with <strong>{{@filterBy.value}}</strong> in <strong>{{@filterBy.propName}}</strong> (reset filter)
+      Projects with <strong>{{@filterBy.value}}</strong> in <strong>{{@filterBy.propName}}</strong>
+      <br><a class="label" onclick={{action updateFilter ""}}>reset filter</a>
       {{else}}
         <a onclick={{action updateFilter ""}} class="filter-section {{class-if withoutFilter "picked"}}">
           All {{@projectsLength}} projects

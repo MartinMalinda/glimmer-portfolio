@@ -1,15 +1,17 @@
 import Component, { tracked } from "@glimmer/component";
-import data, { PortfolioItem } from "../../../utils/data";
+import { PortfolioItem, data, Portfolio } from "../../../utils/data";
 
-interface Filter {
+export interface Filter {
   propName: string;
-  value: any;
+  value: string | Array<string>;
 }
 
-interface Portfolio extends Array<PortfolioItem> {}
+interface EventTarget extends HTMLElement {
+  currentSrc: string;
+}
 
 export default class GlimmerPortfolio extends Component {
-  @tracked portfolioData : Portfolio;
+  @tracked portfolioData : Portfolio = [];
   @tracked active : number = 0;
   @tracked isRightColumnExpanded : boolean = false;
   @tracked bgPositionY : number = 0;
@@ -56,7 +58,7 @@ export default class GlimmerPortfolio extends Component {
   }
 
   saveLoadedSrc(item : PortfolioItem, event : Event) : void {
-    const {currentSrc} = event.target;
+    const {currentSrc} = <HTMLImageElement>event.target;
 
     this.portfolioData = this.updatePortfolio(item, {currentSrc});
   }
@@ -65,14 +67,16 @@ export default class GlimmerPortfolio extends Component {
     this.portfolioData = this.updatePortfolio(this.activePortfolioItem, {didLoadLargeImg: true});
   }
 
-  moveRightColumnBackground(event : Event) : void {
-    const {currentTarget, clientY} = event;
-    let height = currentTarget.offsetHeight;
+  moveRightColumnBackground(event : MouseEvent) : void {
+    const {clientY} = event;
+    const currentTarget = <HTMLElement>event.currentTarget;
+    
+    let height : number = currentTarget.offsetHeight;
     let y = clientY - currentTarget.offsetTop;
-    this.bgPositionY = parseInt((y / height) * 100);
+    this.bgPositionY = parseInt(((y / height) * 100).toFixed(0));
   }
 
-  updatePortfolio(item : PortfolioItem, newData : object) : Portfolio {
+  updatePortfolio(item : PortfolioItem, newData : Object) : Portfolio {
     const newItem = {
       ...item,
       ...newData
