@@ -4,26 +4,34 @@ $medium-space: 20px;
 
 $primary: $darkgreen;
 $base-space: $medium-space; 
+$mobile-breakpoint: 500px;
 
 .glimmer-portfolio {
   
   @import "filter-info";
   @import "links";
+  @import "left-column";
+  @import "right-column";
 
   font-family: 'Helvetica Neue', Verdana;
-  margin-top: 50px;
+  padding-top: 50px;
   font-size: 16px;
   letter-spacing: 0.09em;
   line-height: 1.5em;
   border-bottom: 4px solid $primary;
-  min-height: 100vh;
+  min-height: calc(100vh - 40px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 
   span.type {
     font-size: 15px;
+
+    @media (max-width: $mobile-breakpoint){
+      display: none;
+    }
   }
 
   img.loader {
@@ -54,50 +62,6 @@ $base-space: $medium-space;
     max-height: 100%;
   }
 
-  h3 {
-    font-size: 40px;
-    margin: 0;
-    line-height: 1.05em;
-    position: relative;
-    padding: 0.65em $base-space;
-    color: $primary;
-    background: white;
-    border: 4px solid;
-    text-align: right;
-    width: 125%;
-    text-transform: uppercase;
-    position: relative;
-    top: -10px;
-
-
-    .label {
-      background: darkgrey;
-      font-size: 12px;
-      padding: 2px 5px;
-      line-height: 16px;
-      height: $base-space;
-      margin-left: 5px;
-      right: 0;
-      top: 0;
-      text-shadow: none;
-      position: absolute;
-
-    }
-  }
-
-  h4 {
-    margin: 0;
-    margin-bottom: $base-space;
-    font-size: 25px;
-    background: white;
-    color: $primary;
-    padding: 1em;
-    text-transform: uppercase;
-    width: 120%;
-    border: 4px solid;
-    text-align: right;
-  }
-
   .thumbnails {
     display: flex;
     margin-top: $base-space;
@@ -120,6 +84,10 @@ $base-space: $medium-space;
     max-width: 250px;
     cursor: pointer;
 
+    @media(max-width: $mobile-breakpoint){
+      max-height: 108px;
+    }
+
     &:hover {
       border-color: transparentize($primary, 0.5);
     }
@@ -140,71 +108,23 @@ $base-space: $medium-space;
   .columns {
     display: flex;
     justify-content: space-between;
-    min-height: 100vh;
+    min-height: calc(100vh - 40px);
+    transition: transform 0.4s;
+
+    &.pushRight {
+      transform: translateX(-100vw);
+    }
+
   }
 
   .column {
     $side-column-size: 400px;
 
-
-    &.right {
-      width: 100vw;
-      transition: 0.7s width;
-      background-size: cover !important;
-      position: relative;
-      overflow: hidden;
-      
-      .inner {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-size: cover !important;
-
-        -webkit-mask: linear-gradient(left, black, transparent 30%, black);
-        -webkit-filter: blur(3px);
-        mask: url('#mask-linear');
-        filter: url('#filtre2');
-      }
-    
-      img {
-        border: 4px solid transparent;
-        transition: 0.3s border-color;
-        cursor: pointer;
-    
-        &:hover {
-          border: 4px solid transparentize($primary, 0.2);
-        }
-      }
-    
-      &.blurred {
-        .blurred-placeholder {
-          opacity: 1;
-        }
-      }
+    @media (max-width: $mobile-breakpoint){
+      flex-shrink: 0;
+      width: 100% !important;
     }
-
-    &.middle {
-      width: $side-column-size;
-      text-align: center;
-    }
-
-    &.left {
-      width: 600px;
-      background: transparentize(white, 0.07);
-      opacity: 1;
-      border-right: 4px solid $primary;
-      position: relative;
-      z-index: 2;
-      padding-bottom: 215px;
-    }
-  }
-
-  .technologies {
-    margin-top: 5px;
-    padding: 0 $base-space;
-  }
+  } 
 
   .label {
     display: inline-block;
@@ -221,29 +141,35 @@ $base-space: $medium-space;
     }
   }
 
-  .description {
-    margin: $base-space 0;
-    padding: $base-space $base-space;
-    background: transparentize(grey, 0.87);
-    letter-spacing: 0.05em;
-    margin-top: $base-space - 5px;
-    box-shadow: inset 0px 1px 1px 1px transparentize(black, 0.95);
-    font-size: 15px;
+  .mobile-preview-switch {
+    display: none;
 
-  }
+    @media (max-width: $mobile-breakpoint){
+      position: absolute;
+      bottom: 128px;
+      width: 100%;
+      z-index: 3;
+      display: flex;
 
-  .my-work {
-    padding: 0 $base-space;
-  }
+      button {
+        width: 50%;
+        height: 40px;
+        background: white;
+        border: 0;
+        text-transform: uppercase;
+        box-shadow: 1px 1px 1px 1px transparentize(black, 0.9), -1px -1px 1px 1px transparentize(black, 0.9);
+        margin: 10px;
+        transition: 0.3s background, 0.3s color;
 
-  .line {
-    padding: 0.4em 8px;
-    font-size: 14px;
-    letter-spacing: 0.05em;
-    box-shadow: inset 0px 1px 1px 1px transparentize(black, 0.95);
+        &.info {
+          margin-right: 0;
+        }
 
-    &:nth-child(2n - 2){
-      background: transparentize(grey, 0.87);
+        &.active {
+          background: $primary;
+          color: white;
+        }
+      }
     }
   }
 }

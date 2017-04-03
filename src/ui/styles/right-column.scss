@@ -1,0 +1,37 @@
+.column.right {
+  width: 100vw;
+  transition: 0.7s width;
+  background-size: cover !important;
+  position: relative;
+  overflow: hidden;
+  
+  .inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover !important;
+
+    -webkit-mask: linear-gradient(left, black, transparent 30%, black);
+    -webkit-filter: blur(3px);
+    mask: url('#mask-linear');
+    filter: url('#filtre2');
+  }
+
+  img {
+    border: 4px solid transparent;
+    transition: 0.3s border-color;
+    cursor: pointer;
+
+    &:hover {
+      border: 4px solid transparentize($primary, 0.2);
+    }
+  }
+
+  &.blurred {
+    .blurred-placeholder {
+      opacity: 1;
+    }
+  }
+}

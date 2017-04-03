@@ -19,6 +19,7 @@ export default class GlimmerPortfolio extends Component {
     propName: '',
     value: ''
   };
+  @tracked showPreview : boolean = false; // for mobile only
 
   constructor(options){
     super(options);
@@ -74,6 +75,10 @@ export default class GlimmerPortfolio extends Component {
     let height : number = currentTarget.offsetHeight;
     let y = clientY - currentTarget.offsetTop;
     this.bgPositionY = parseInt(((y / height) * 100).toFixed(0));
+  }
+
+  setPreviewMode(value : boolean) : void {
+    this.showPreview = value;
   }
 
   updatePortfolio(item : PortfolioItem, newData : Object) : Portfolio {

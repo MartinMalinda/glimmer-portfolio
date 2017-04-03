@@ -1,18 +1,26 @@
 .filter-info {
 
   width: 200px;
-  padding: 20px;
+  padding: $base-space;
   max-width: 200px;
   transition: 0.5s max-width, 0.2s opacity;
   opacity: 1;
   flex-shrink: 0;
   background: transparentize(white, 0.1);
-  margin: 0 20px;
+  margin: 0 $base-space;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   letter-spacing: 0.05em;
+
+  @media(max-width: $mobile-breakpoint){
+    max-height: 108px;
+    font-size: 14px;
+    line-height: 18px;
+    align-items: flex-start;
+    padding: $base-space/2;
+  }
 
   &.hidden {
     max-width: 0;

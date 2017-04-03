@@ -1,5 +1,5 @@
 <div class="glimmer-portfolio">
-  <div class="columns">
+  <div class="columns {{class-if showPreview "pushRight"}}">
     <div class="left column">
       <h3>
         <span class="type">{{activePortfolioItem.projectType}} / </span>{{activePortfolioItem.title}}
@@ -35,6 +35,17 @@
       <div class="blurred-placeholder" style="background:url('{{activePortfolioItem.currentSrc}}')">
       </div>
     </div>
+  </div>
+  <div class="mobile-preview-switch">
+    <button
+      onclick={{action setPreviewMode false}}
+      class="info {{class-if (not showPreview) "active"}}">
+      Info
+    </button>
+    <button onclick={{action setPreviewMode true}}
+      class="preview {{class-if showPreview "active"}}">
+      Preview
+    </button>
   </div>
   <div class="thumbnails">
     <filter-info
