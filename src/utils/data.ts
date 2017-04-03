@@ -40,7 +40,8 @@ export const data : Portfolio = [
     img: 'http://unsplash.it/1001/1000',
     smallImg: 'https://unsplash.it/200/300',
     projectType: 'Website',
-    currentSrc: ''
+    currentSrc: '',
+    demoURL: 'https://demo.meetserenity.com/'
   },{
     title: 'Meetserenity.com',
     technologies: ["Gulp", "VanillaJS"],
@@ -49,7 +50,8 @@ export const data : Portfolio = [
     img: 'http://unsplash.it/1025/1000',
     smallImg: 'https://unsplash.it/200/299',
     projectType: 'Website',
-    currentSrc: ''
+    currentSrc: '',
+    demoURL: 'https://meetserenity.com/scribe'
   },{
     title: 'Interactive UI for PriceFX',
     technologies: ["Ember", "Semantic UI", "Node.js"],
@@ -58,7 +60,8 @@ export const data : Portfolio = [
     img: 'http://unsplash.it/1002/1000',
     smallImg: 'https://unsplash.it/200/301',
     projectType: 'Website',
-    currentSrc: ''
+    currentSrc: '',
+    demoURL: ''
   },{
     title: 'Autora',
     technologies: ["Ember", "Firebase", "Semantic UI", "Node.js", "SVG"],
@@ -67,7 +70,8 @@ export const data : Portfolio = [
     img: 'http://unsplash.it/1003/1000',
     smallImg: 'https://unsplash.it/200/302',
     projectType: 'Website',
-    currentSrc: ''
+    currentSrc: '',
+    demoURL: 'http://autora-staging.herokuapp.com'
   },{
     title: 'Topmonks.com',
     technologies: ["Gulp", "Node.js", "SVG"],
@@ -76,7 +80,8 @@ export const data : Portfolio = [
     img: 'http://unsplash.it/1007/1000',
     smallImg: 'https://unsplash.it/200/303',
     projectType: 'Website',
-    currentSrc: ''
+    currentSrc: '',
+    demoURL: 'https://www.topmonks.com/'
   },{
     title: 'Personal portfolio',
     technologies: ["Glimmer", "Gulp"],
@@ -85,7 +90,8 @@ export const data : Portfolio = [
     img: 'http://unsplash.it/1004/1000',
     smallImg: 'https://unsplash.it/200/304',
     projectType: 'Website',
-    currentSrc: ''
+    currentSrc: '',
+    demoURL: 'https://martinmalinda.cz/'
   },{
     title: 'Lukaslindner.cz',
     technologies: ['Ember', 'Shell'],
@@ -94,7 +100,8 @@ export const data : Portfolio = [
     img: 'http://unsplash.it/1013/1000',
     smallImg: 'https://unsplash.it/200/305',
     projectType: 'Website',
-    currentSrc: ''
+    currentSrc: '',
+    demoURL: 'http://lukaslindner.cz/lookbook/couture-2015'
   },{
     title: 'Open Finance',
     technologies: ["GoogleMapsAPI"],
@@ -103,7 +110,8 @@ export const data : Portfolio = [
     img: 'http://unsplash.it/1005/1000',
     smallImg: 'https://unsplash.it/200/306',
     projectType: 'Website',
-    currentSrc: ''
+    currentSrc: '',
+    demoURL: 'http://open-finance.cz/homepage/kontakt/'
   },{
     title: 'Wisephora',
     technologies: ["Gulp"],
@@ -112,7 +120,8 @@ export const data : Portfolio = [
     img: 'http://unsplash.it/1060/1000',
     smallImg: 'https://unsplash.it/200/307',
     projectType: 'Website',
-    currentSrc: ''
+    currentSrc: '',
+    demoURL: 'http://www.wisephora.com/'
   },{
     title: 'Pisusvetove.cz',
     technologies: ["WordPress"],
@@ -121,7 +130,8 @@ export const data : Portfolio = [
     img: 'http://unsplash.it/1011/1000',
     smallImg: 'https://unsplash.it/200/308',
     projectType: 'Consulting',
-    currentSrc: ''
+    currentSrc: '',
+    demoURL: 'http://pisusvetove.cz/'
   },{
     title: 'Tomashonz.com',
     technologies: ["WordPress", "PhotoSwipe"],
@@ -130,7 +140,8 @@ export const data : Portfolio = [
     img: 'http://unsplash.it/1010/1000',
     smallImg: 'https://unsplash.it/200/309',
     projectType: 'Consulting',
-    currentSrc: ''
+    currentSrc: '',
+    demoURL: 'http://tomashonz.com/'
   },{
     title: 'Microclimate data',
     technologies: ['Ember', 'Firebase', 'Semantic UI', 'SVG'],
@@ -139,7 +150,8 @@ export const data : Portfolio = [
     img: 'http://unsplash.it/1011/1000',
     smallImg: 'https://unsplash.it/200/310',
     projectType: 'Code',
-    currentSrc: ''
+    currentSrc: '',
+    demoURL: 'http://martinmalinda.cz/microclimate/'
 
   }
 ];

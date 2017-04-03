@@ -4,6 +4,11 @@
       <h3>
         <span class="type">{{activePortfolioItem.projectType}} / </span>{{activePortfolioItem.title}}
       </h3>
+      <div class="links">
+        {{#if activePortfolioItem.demoURL}}
+          <demo-link @url={{activePortfolioItem.demoURL}} />
+        {{/if}}
+      </div>
       <div class="technologies">
         {{#each activePortfolioItem.technologies key="@index" as |technology|}}
           <tech-button @onclick={{action updateFilter}} @name={{technology}} @filter={{filterBy}} />
@@ -13,7 +18,7 @@
         {{activePortfolioItem.description}}
       </div>
      <div class="my-work">
-      <h4>{{length portfolioData}} My work</h4>
+      <h4>My work</h4>
        {{#each activePortfolioItem.myWork key="@index" as |work|}}
          <div class="line">
            {{work}}

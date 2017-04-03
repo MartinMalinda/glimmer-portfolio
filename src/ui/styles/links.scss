@@ -1,0 +1,17 @@
+.links {
+  padding-left: 20px;
+  margin: $base-space 0;
+
+  .demo {
+    background: transparent;
+    color: black;
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    display: inline-block;
+    width: 21px;
+    margin: 0 5px;
+  }
+}
