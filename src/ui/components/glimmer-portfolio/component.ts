@@ -46,8 +46,11 @@ export default class GlimmerPortfolio extends Component {
     return !this.activePortfolioItem.didLoadLargeImg;
   }
 
-  updateActiveItem(item : PortfolioItem) : void {
-    this.active = this.portfolioData.indexOf(item);
+  updateActiveItem(item : PortfolioItem, event : Event) : void {
+    let isDragging : boolean = (<HTMLElement>event.currentTarget).parentElement.classList.contains('dragging');
+    if(!isDragging){
+      this.active = this.portfolioData.indexOf(item);
+    }
   }
 
   updateFilter(filterBy : Filter) : void {

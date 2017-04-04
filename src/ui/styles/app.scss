@@ -73,6 +73,16 @@ $mobile-breakpoint: 500px;
     width: 100%;
     background: transparentize($primary, 0.7);
     z-index: 3;
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+
+    &:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+    }
   }
 
   .thumbnail {
