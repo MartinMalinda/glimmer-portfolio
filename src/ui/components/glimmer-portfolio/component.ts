@@ -46,6 +46,16 @@ export default class GlimmerPortfolio extends Component {
     return !this.activePortfolioItem.didLoadLargeImg;
   }
 
+  @tracked('bgPositionY', 'activePortfolioItem')
+  get edgeCSSBackgroundFallback() : string {
+    if(typeof (<HTMLElement>this.element).style.objectFit === 'undefined'){
+
+      return `background:url('${this.activePortfolioItem.img}') 50% ${this.bgPositionY}%`;
+    }
+
+    return '';
+  }
+
   updateActiveItem(item : PortfolioItem, event : Event) : void {
     let isDragging : boolean = (<HTMLElement>event.currentTarget).parentElement.classList.contains('dragging');
     if(!isDragging){

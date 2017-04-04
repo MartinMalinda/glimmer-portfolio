@@ -28,9 +28,9 @@
     </div>
     <div
       class="right column {{class-if showBlurredImage "blurred"}}"
-      style="background:url('{{activePortfolioItem.img}}') 50% {{bgPositionY}}%"
+      style={{edgeCSSBackgroundFallback}}
       onmousemove={{action moveRightColumnBackground}}>
-      <img class="loader" onload={{action largeImgLoaded}} src="{{activePortfolioItem.img}}" alt="">
+      <img style="object-position: 0 {{bgPositionY}}%" class="image-preview" onload={{action largeImgLoaded}} src="{{activePortfolioItem.img}}" alt="">
       
       <div class="blurred-placeholder" style="background:url('{{activePortfolioItem.currentSrc}}')">
       </div>
