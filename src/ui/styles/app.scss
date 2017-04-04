@@ -83,6 +83,7 @@ $mobile-breakpoint: 500px;
       cursor: -moz-grabbing;
       cursor: -webkit-grabbing;
     }
+
   }
 
   .thumbnail {
@@ -111,6 +112,12 @@ $mobile-breakpoint: 500px;
       opacity: 0;
       margin: 0;
       padding: 0;
+    }
+
+    &.empty {
+      // this is a last empty thumbnail to have empty space in the end
+      // could not find a better way as margin and padding is stripped in overflow:auto
+      width: 1px;
     }
   }
 
