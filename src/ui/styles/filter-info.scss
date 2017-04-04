@@ -1,6 +1,5 @@
 .filter-info {
 
-  width: 200px;
   padding: $base-space;
   max-width: 200px;
   transition: 0.5s max-width, 0.2s opacity;
@@ -20,6 +19,7 @@
     line-height: 18px;
     align-items: flex-start;
     padding: $base-space/2;
+    margin: 0 $base-space/2;
   }
 
   &.hidden {
@@ -30,6 +30,18 @@
 
   .inner {
     width: 160px;
+
+    &.instructions {
+      display: flex;
+      align-items: center;
+      width: 55px;
+      height: 100%;
+      justify-content: center;
+    }
+
+    svg {
+      width: 45px;
+    }
   }
 
   .filter-section {

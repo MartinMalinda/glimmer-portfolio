@@ -3,6 +3,17 @@ import { ProjectType } from '../../../utils/data';
 import { Filter } from '../glimmer-portfolio/component';
 
 export default class FilterInfo extends Component {
+
+  @tracked showInstructions : boolean = false;
+
+  constructor(options) {
+    super(options);
+
+    if(typeof window !== 'undefined'){
+      this.showInstructions = window.innerWidth < 501;
+    }
+  }
+
   @tracked('args')
   get filteringByTechnologies() : boolean {
     return this.args.filterBy.propName === 'technologies';
