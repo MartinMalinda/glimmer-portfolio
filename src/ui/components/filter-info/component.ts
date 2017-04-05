@@ -10,7 +10,7 @@ export default class FilterInfo extends Component {
     super(options);
 
     if(typeof window !== 'undefined'){
-      this.showInstructions = window.innerWidth < 501;
+      this.showInstructions = window.innerWidth < 769;
     }
   }
 

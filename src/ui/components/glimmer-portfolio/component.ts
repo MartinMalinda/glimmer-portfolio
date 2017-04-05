@@ -1,5 +1,5 @@
 import Component, { tracked } from "@glimmer/component";
-import { PortfolioItem, data, Portfolio } from "../../../utils/data";
+import { PortfolioItem, Portfolio } from "../../../utils/data";
 
 export interface Filter {
   propName: string;
@@ -24,7 +24,8 @@ export default class GlimmerPortfolio extends Component {
   constructor(options){
     super(options);
 
-    this.portfolioData = data;
+    let rawData = (<HTMLScriptElement>document.querySelectorAll('#glimmer-portfolio-data')[0]).innerText;
+    this.portfolioData = JSON.parse(rawData);
   }
 
   @tracked('isRightColumnExpanded')

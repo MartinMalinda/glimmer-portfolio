@@ -14,16 +14,6 @@
     background-size: cover !important;
   }
 
-  img {
-    border: 4px solid transparent;
-    transition: 0.3s border-color;
-    cursor: pointer;
-
-    &:hover {
-      border: 4px solid transparentize($primary, 0.2);
-    }
-  }
-
   &.blurred {
     .blurred-placeholder {
       opacity: 1;

@@ -1,0 +1,133 @@
+[{
+  title: 'Scribe',
+  technologies: ["Ember", "WordPress"],
+  description: "Inovative REST API theme for WordPress featuring instant transitions, efficient image loading, loading content in advance and real-time customization.",
+  myWork: ['Content Strategy', 'Integrating Ember with WordPress', 'Quality Assurance', 'Performance optimizations', 'Marketing', 'Business planning'],
+  img: 'http://unsplash.it/1001/1000',
+  srcset: 'https://unsplash.it/1010/1000 1010w',
+  smallImg: 'https://unsplash.it/200/300',
+  projectType: 'Website',
+  currentSrc: '',
+  demoURL: 'https://demo.meetserenity.com/'
+}, {
+  title: 'Meetserenity.com',
+  technologies: ["Gulp", "VanillaJS"],
+  description: "Landing page for Serenity Themes. Optimized to load as quickly as possible. Interactive and animated.",
+  myWork: ['Content Strategy', 'Load performance optimizations', 'Interactive content'],
+  img: 'http://unsplash.it/1025/1000',
+  srcset: 'https://unsplash.it/1010/1000 1010w',
+  smallImg: 'https://unsplash.it/200/299',
+  projectType: 'Website',
+  currentSrc: '',
+  demoURL: 'https://meetserenity.com/scribe'
+}, {
+  title: 'Interactive UI for PriceFX',
+  technologies: ["Ember", "Semantic UI"],
+  description: "Interactive UI for leading SaaS pricing and CQP solution provider. Internal tool.",
+  myWork: ['Analysis of large sets of data', 'Creating comprehensive UI', 'Testing', 'Interactive visualisations'],
+  img: 'http://unsplash.it/1002/1000',
+  srcset: 'https://unsplash.it/1010/1000 1010w',
+  smallImg: 'https://unsplash.it/200/301',
+  projectType: 'Website',
+  currentSrc: '',
+  demoURL: ''
+}, {
+  title: 'Autora',
+  technologies: ["Ember", "Firebase", "Semantic UI", "Node.js", "SVG"],
+  description: "A collaborative writing platform featuring real-time updates. Development stopped in MVP phase in 2015.",
+  myWork: ['Interactive web application', 'SVG animation', 'Real-time updates and sync'],
+  img: 'http://unsplash.it/1003/1000',
+  srcset: 'https://unsplash.it/1010/1000 1010w',
+  smallImg: 'https://unsplash.it/200/302',
+  projectType: 'Website',
+  currentSrc: '',
+  demoURL: 'http://autora-staging.herokuapp.com'
+}, {
+  title: 'Topmonks.com',
+  technologies: ["Gulp", "Node.js", "SVG"],
+  description: 'Landing page for a Czech software development, startup oriented company. Featuring advanced layout, animations and initial load optimizations.',
+  myWork: ['HTML/CSS coding', 'Animations', 'Tooling', 'Non-blocking CSS'],
+  img: 'http://unsplash.it/1007/1000',
+  srcset: 'https://unsplash.it/1010/1000 1010w',
+  smallImg: 'https://unsplash.it/200/303',
+  projectType: 'Website',
+  currentSrc: '',
+  demoURL: 'https://www.topmonks.com/'
+}, {
+  title: 'Personal portfolio',
+  technologies: ["Glimmer", "Gulp"],
+  description: 'This portfolio is a showcase of all my skills. It has been designed by code and made interactive with JavaScript and still highly optimized for all devices.',
+  myWork: ['Content Strategy', 'Design by code', 'HTML/CSS coding', 'Animations', 'Interactive User Interface', 'Performance optimizations'],
+  img: 'http://unsplash.it/1004/1000',
+  srcset: 'https://unsplash.it/1010/1000 1010w',
+  smallImg: 'https://unsplash.it/200/304',
+  projectType: 'Website',
+  currentSrc: '',
+  demoURL: 'https://martinmalinda.cz/'
+}, {
+  title: 'Lukaslindner.cz',
+  technologies: ['Ember', 'Shell'],
+  description: 'Personal website of a famous czech Fashion artist. It features a unique gallery layout, fast transitions and zooming funtionality.',
+  myWork: ['Creating a tailored web app', 'Prerendering logic'],
+  img: 'http://unsplash.it/1013/1000',
+  srcset: 'https://unsplash.it/1010/1000 1010w',
+  smallImg: 'https://unsplash.it/200/305',
+  projectType: 'Website',
+  currentSrc: '',
+  demoURL: 'http://lukaslindner.cz/lookbook/couture-2015'
+}, {
+  title: 'Wisephora',
+  technologies: ["Gulp"],
+  description: 'Website for a conference about future of work held in Prague. I did early version of the website and set up tooling.',
+  myWork: ['Tooling', 'Performance optimizations'],
+  img: 'http://unsplash.it/1060/1000',
+  srcset: 'https://unsplash.it/1010/1000 1010w',
+  smallImg: 'https://unsplash.it/200/307',
+  projectType: 'Website',
+  currentSrc: '',
+  demoURL: 'http://www.wisephora.com/'
+}, {
+  title: 'Open Finance',
+  technologies: ["GoogleMapsAPI"],
+  description: "Open Finance is a singificant finance consulting company based in Prague. Website is fully responsive and even though it is image heavy, it's size is not particularly high",
+  myWork: ['Interactive Google Map', 'Responsive images', 'Animations'],
+  img: 'http://unsplash.it/1005/1000',
+  srcset: 'https://unsplash.it/1010/1000 1010w',
+  smallImg: 'https://unsplash.it/200/306',
+  projectType: 'Website',
+  currentSrc: '',
+  demoURL: 'http://open-finance.cz/homepage/kontakt/'
+}, {
+  title: 'Pisusvetove.cz',
+  technologies: ["WordPress"],
+  description: 'I helped picking a theme and did multiple adjustments via CSS and JavaScript',
+  myWork: ['Picking a WordPress theme', 'Gallery layout and style updates'],
+  img: 'http://unsplash.it/1011/1000',
+  srcset: 'https://unsplash.it/1010/1000 1010w',
+  smallImg: 'https://unsplash.it/200/308',
+  projectType: 'Consulting',
+  currentSrc: '',
+  demoURL: 'http://pisusvetove.cz/'
+}, {
+  title: 'Tomashonz.com',
+  technologies: ["WordPress", "PhotoSwipe"],
+  description: 'I helped picking a theme an did multiple adjustments via CSS and JavaScript',
+  myWork: ['Picking a WordPress theme', 'Implementing PhotoSwipe solution'],
+  img: 'http://unsplash.it/1010/1000',
+  srcset: 'https://unsplash.it/1010/1000 1010w',
+  smallImg: 'https://unsplash.it/200/309',
+  projectType: 'Consulting',
+  currentSrc: '',
+  demoURL: 'http://tomashonz.com/'
+}, {
+  title: 'Microclimate data',
+  technologies: ['Ember', 'Firebase', 'Semantic UI', 'SVG'],
+  description: "Personal tool for analysing and presenting data for my Bachelor's degree project.",
+  myWork: ['Saving data to Firebase', 'Implementing own charts via SVG', 'Algorithms for filtering and sorting'],
+  img: 'http://unsplash.it/1011/1000',
+  srcset: 'https://unsplash.it/1010/1000 1010w',
+  smallImg: 'https://unsplash.it/200/310',
+  projectType: 'Code',
+  currentSrc: '',
+  demoURL: 'http://martinmalinda.cz/microclimate/'
+}]

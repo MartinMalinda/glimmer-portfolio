@@ -1,6 +1,6 @@
 <div class="glimmer-portfolio">
   <div class="columns {{class-if showPreview "pushRight"}}">
-    <div class="left column">
+    <div role="region" aria-live="polite" class="left column">
       <h3>
         <span class="type">{{activePortfolioItem.projectType}} / </span>{{activePortfolioItem.title}}
       </h3>
@@ -30,10 +30,17 @@
       class="right column {{class-if showBlurredImage "blurred"}}"
       style={{edgeCSSBackgroundFallback}}
       onmousemove={{action moveRightColumnBackground}}>
-      <img style="object-position: 0 {{bgPositionY}}%" class="image-preview" onload={{action largeImgLoaded}} src="{{activePortfolioItem.img}}" alt="">
-      
-      <div class="blurred-placeholder" style="background:url('{{activePortfolioItem.currentSrc}}')">
-      </div>
+      {{#unless edgeCSSBackgroundFallback}}
+        <img
+          style="object-position: 50% {{bgPositionY}}%"
+          class="image-preview"
+          onload={{action largeImgLoaded}}
+          src={{activePortfolioItem.img}}
+          srcset={{activePortfolioItem.srcset}} alt="Visual image preview of {{activePortfolioItem.title}}">
+        
+        <div class="blurred-placeholder" style="background:url('{{activePortfolioItem.currentSrc}}')">
+        </div>
+      {{/unless}}
     </div>
   </div>
   <div class="mobile-preview-switch">

@@ -5,6 +5,7 @@ $medium-space: 20px;
 $primary: $darkgreen;
 $base-space: $medium-space; 
 $mobile-breakpoint: 500px;
+$tablet-portait-breakpoint: 800px;
 
 .glimmer-portfolio {
   
@@ -129,7 +130,9 @@ $mobile-breakpoint: 500px;
     transition: transform 0.4s;
 
     &.pushRight {
-      transform: translateX(-100vw);
+      @media (max-width: $tablet-portait-breakpoint){
+        transform: translateX(-100vw);
+      }
     }
 
   }
@@ -137,7 +140,7 @@ $mobile-breakpoint: 500px;
   .column {
     $side-column-size: 400px;
 
-    @media (max-width: $mobile-breakpoint){
+    @media (max-width: $tablet-portait-breakpoint){
       flex-shrink: 0;
       width: 100% !important;
     }
@@ -161,7 +164,7 @@ $mobile-breakpoint: 500px;
   .mobile-preview-switch {
     display: none;
 
-    @media (max-width: $mobile-breakpoint){
+    @media (max-width: $tablet-portait-breakpoint){
       position: absolute;
       bottom: 128px;
       width: 100%;
@@ -187,6 +190,10 @@ $mobile-breakpoint: 500px;
           color: white;
         }
       }
+    }
+
+    @media (min-width: $mobile-breakpoint + 1) and (max-width: $tablet-portait-breakpoint){
+      bottom: 200px;
     }
   }
 }
