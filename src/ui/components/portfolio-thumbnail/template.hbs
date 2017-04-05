@@ -1,1 +1,7 @@
-<img aria-label="Display info about {{@mobel.title}}" role="button" class={{className}} src="{{@img}}" alt="Image preview thumbnail for {{@model.title}}. Serves as a button to active project.">
+<img
+  aria-label="Display info about {{@mobel.title}}"
+  role="button" class={{className}}
+  src={{@img}}
+  srcset={{@model.srcset}}
+  sizes="(min-width: 501px) 250px, 150px"
+  alt="Image preview thumbnail for {{@model.title}}. Serves as a button to active project.">

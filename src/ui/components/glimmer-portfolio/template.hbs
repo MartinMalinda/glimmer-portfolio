@@ -36,7 +36,8 @@
           class="image-preview"
           onload={{action largeImgLoaded}}
           src={{activePortfolioItem.img}}
-          srcset={{activePortfolioItem.srcset}} alt="Visual image preview of {{activePortfolioItem.title}}">
+          srcset={{activePortfolioItem.srcset}} alt="Visual image preview of {{activePortfolioItem.title}}"
+          sizes="(min-width: 769px) calc(100vw - 500px), 100vw">
         
         <div class="blurred-placeholder" style="background:url('{{activePortfolioItem.currentSrc}}')">
         </div>
