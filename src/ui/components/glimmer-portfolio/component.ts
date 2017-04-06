@@ -61,6 +61,7 @@ export default class GlimmerPortfolio extends Component {
     let isDragging : boolean = (<HTMLElement>event.currentTarget).parentElement.classList.contains('dragging');
     if(!isDragging){
       this.active = this.portfolioData.indexOf(item);
+      this.bgPositionY = 0;
     }
   }
 
@@ -86,8 +87,9 @@ export default class GlimmerPortfolio extends Component {
     const {clientY} = event;
     const currentTarget = <HTMLElement>event.currentTarget;
 
+    const thumbnailSectionHeight = 200;
     
-    let height : number = currentTarget.offsetHeight;
+    let height : number = currentTarget.offsetHeight - thumbnailSectionHeight;
     let y = clientY - currentTarget.offsetTop;
     let percentage = parseInt(((y / height) * 100).toFixed(0));
     this.bgPositionY = percentage > 0 ? percentage : 0;

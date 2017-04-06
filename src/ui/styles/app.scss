@@ -8,7 +8,9 @@ $mobile-breakpoint: 500px;
 $tablet-portait-breakpoint: 800px;
 
 .glimmer-portfolio {
-  
+
+
+  @import "scrollbars";
   @import "filter-info";
   @import "links";
   @import "left-column";
@@ -89,6 +91,7 @@ $tablet-portait-breakpoint: 800px;
   }
 
   .thumbnail {
+    width: 180px;
     height: 180px;
     margin: 0 10px;
     flex-shrink: 0;
@@ -97,8 +100,12 @@ $tablet-portait-breakpoint: 800px;
     max-width: 250px;
     cursor: pointer;
 
+    object-fit: cover;
+    object-position: 50% 0%;
+
     @media(max-width: $mobile-breakpoint){
-      max-height: 108px;
+      max-height: 100px;
+      max-width: 100px;
     }
 
     &:hover {
