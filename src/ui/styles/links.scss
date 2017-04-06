@@ -1,14 +1,6 @@
 .links {
 
   padding: 0 $base-space;
-  
-  .link:first-child {
-    margin-top: $base-space;
-    @media(max-width: $mobile-breakpoint) {
-      margin-bottom: $base-space/2;
-      margin-top: 0;
-    }
-  }
 
   .link:last-child {
     margin-bottom: $base-space;

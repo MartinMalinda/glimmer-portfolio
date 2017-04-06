@@ -44,6 +44,11 @@ $tablet-portait-breakpoint: 800px;
     width: 100%;
     height: 100%;
     position: absolute;
+    transition: 0.3s object-position;
+
+    &:hover {
+      will-change: object-position;
+    }
   }
 
   .blurred-placeholder {
@@ -157,16 +162,14 @@ $tablet-portait-breakpoint: 800px;
 
   .label {
     display: inline-block;
-    padding: $base-space - 15px 7px;
-    border-radius: 3px;
-    background: lightgrey;
-    transition: 0.3s background;
-    margin: 5px 0;
+    margin: 5px;
+    border-bottom: 2px dashed;
+    transition: 0.3s all;
+
 
     &:hover, &.active {
       cursor: pointer;
-      background: darken(lightgrey, 20%);
-      color: white;
+      color: $primary;
     }
   }
 
