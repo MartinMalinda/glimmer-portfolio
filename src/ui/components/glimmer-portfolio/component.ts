@@ -25,7 +25,7 @@ export default class GlimmerPortfolio extends Component {
     super(options);
 
     let rawData = (<HTMLScriptElement>document.querySelectorAll('#glimmer-portfolio-data')[0]).innerText;
-    this.portfolioData = JSON.parse(rawData);
+    this.portfolioData = eval(rawData);
   }
 
   @tracked('isRightColumnExpanded')
