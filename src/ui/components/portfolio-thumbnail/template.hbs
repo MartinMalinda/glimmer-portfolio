@@ -1,7 +1,11 @@
-<img
+<button
   aria-label="Display info about {{@mobel.title}}"
-  role="button" class={{className}}
-  src={{@img}}
-  srcset={{@model.srcset}}
-  sizes="(min-width: 501px) 180px, 100px"
-  alt="Image preview thumbnail for {{@model.title}}. Serves as a button to active project.">
+  tabindex="0"
+  class={{className}}
+  >
+  <img
+    src={{@img}}
+    srcset={{@model.srcset}}
+    sizes="(min-width: 501px) 180px, 100px"
+    alt="Image preview thumbnail for {{@model.title}}. Serves as a button to active project.">
+</button>

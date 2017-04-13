@@ -31,7 +31,7 @@ export default class PortfolioThumbnail extends Component {
 
     let classList : Array<string> = [];
 
-    if(this.args.img === this.args.activeItem.smallImg) {
+    if(this.args.model.title === this.args.activeItem.title) {
       classList.push('active');
     }
 
