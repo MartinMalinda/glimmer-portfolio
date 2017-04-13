@@ -79,13 +79,13 @@ export default class GlimmerPortfolio extends Component {
   }
 
   moveRightColumnBackground(event : MouseEvent) : void {
-    const {clientY} = event;
+    const {offsetY} = event;
     const currentTarget = <HTMLElement>event.currentTarget;
 
     const thumbnailSectionHeight = 200;
     
     let height : number = currentTarget.offsetHeight - thumbnailSectionHeight;
-    let y = clientY - currentTarget.offsetTop;
+    let y = offsetY - currentTarget.offsetTop;
     let percentage = parseInt(((y / height) * 100).toFixed(0));
     this.bgPositionY = percentage > 0 ? percentage : 0;
   }
