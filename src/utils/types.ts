@@ -18,6 +18,11 @@ export interface PortfolioItem {
   expanded?: boolean;
 }
 
+export interface Filter {
+  propName: string;
+  value: string | Array<string>;
+}
+
 export interface Portfolio extends Array<PortfolioItem> {}
 
 export type Tech =

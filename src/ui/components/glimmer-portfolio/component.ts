@@ -1,10 +1,5 @@
 import Component, { tracked } from "@glimmer/component";
-import { PortfolioItem, Portfolio } from "../../../utils/data";
-
-export interface Filter {
-  propName: string;
-  value: string | Array<string>;
-}
+import { PortfolioItem, Portfolio, Filter } from "../../../utils/types";
 
 interface EventTarget extends HTMLElement {
   currentSrc: string;

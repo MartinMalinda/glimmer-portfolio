@@ -1,6 +1,15 @@
 import Component, { tracked } from '@glimmer/component';
+import { PortfolioItem, Filter } from "../../../utils/types";
+
 
 export default class PortfolioThumbnail extends Component {
+
+  args: {
+    filterBy: Filter;
+    model: PortfolioItem;
+    img: string;
+    activeItem: PortfolioItem;
+  }
 
   @tracked('args')
   get isVisible() : boolean {

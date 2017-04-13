@@ -1,8 +1,12 @@
 import Component, { tracked } from '@glimmer/component';
-import { ProjectType } from '../../../utils/data';
-import { Filter } from '../glimmer-portfolio/component';
+import { ProjectType, Filter } from '../../../utils/types';
 
 export default class FilterInfo extends Component {
+
+  args: {
+    filterBy: Filter;
+    onFilterUpdate: (Filter) => void;
+  }
 
   @tracked showInstructions : boolean = false;
 

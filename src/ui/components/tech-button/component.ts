@@ -1,6 +1,14 @@
 import Component, {tracked} from '@glimmer/component';
+import {Filter} from '../../../utils/types';
 
 export default class TechButton extends Component {
+
+  args: {
+    name: string;
+    filter: Filter;
+    onclick: (Filter) => void;
+  }
+
   @tracked('args')
   get extraClass() : string | void {
     const {name, filter} = this.args;
