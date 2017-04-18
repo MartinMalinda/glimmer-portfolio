@@ -57,6 +57,7 @@ export default class GlimmerPortfolio extends Component {
     if(!isDragging){
       this.active = this.portfolioData.indexOf(item);
       this.bgPositionY = 0;
+      (<HTMLElement>this.element).scrollIntoView();
     }
   }
 
